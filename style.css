@@ -1,0 +1,13 @@
+#d20-roll-button {
+    border: none;
+    background-color: transparent;
+    transition: transform.2s;
+}
+
+#d20-roll-button:hover {
+    transform: scale(1.1);
+}
+
+#d20-roll-result {
+    font-weight:600;
+}
