@@ -1,3 +1,21 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#char-gen-container {
+    width: 300px;
+    min-width: 250px;
+    height: auto;
+    min-height: 500px;
+    background-color: grey;
+}
+
 #d20-roll-button {
     border: none;
     background-color: transparent;
@@ -6,6 +24,11 @@
 
 #d20-roll-button:hover {
     transform: scale(1.1);
+}
+
+#d20-roll-button-img {
+    width: 150px;
+    height: auto;
 }
 
 #d20-roll-result {
