@@ -17,18 +17,19 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="char-gen-container">
+            <h1>D&D Character Generator</h1>
+            <p style="">Roll the D20 to generate your character!</p>
 
-        <h1>Roll the D20 to generate your character!</h1>
+            <button id="d20-roll-button" onclick="d20Roll(), generateCharacter()s;" style="button">
+                <img id="d20-roll-button-img" src="images/d20_640.png" alt="A red D20 die showing the number 20.">
+            </button>
 
-        <button id="d20-roll-button" onclick="d20Roll(), generateCharacter();" style="button">
-            <img src="images/d20_640.png" alt="A red D20 die showing the number 20." width="200px" height="auto">
-        </button>
+            <div id="d20-roll-result">What will you roll?</div>
 
-        <div id="d20-roll-result">What will you roll?</div>
+            <h1>Character:</h1>
 
-        <h1>Character:</h1>
-
-        <div id="character-result"></div>
-        
+            <div id="character-result"></div>
+        </div>
     </body>
 </html>
