@@ -161,7 +161,11 @@ function generateCharacter() { //change this to generate individual components i
     //
     //  PRINT
     //
+    
+
+    //LOGS
     console.log(`%c You are a ${raceLength} ${classLength}!`, 'font-size: 20px; font-weight:700');
+    console.log(`%c Your name is ${firstName} \'the ${titleNameA} ${titleNameB}\' ${lastName}`, 'font-size: 18px; font-weight:500; color:red;');
     console.log(`%c Here is your inventory:`, 'font-size: 16px');
     console.log(characterInventory);
 
