@@ -7,7 +7,8 @@
 - character weapon genertor
 - weapon specialistation gen
 
-- character name generator - first, nickname, last e.g. Ragnor 'The Blood Bringer' Thorn
+- capitalise the name
+
 
 - character look generator - height, clothes etc
 
@@ -76,12 +77,7 @@ console.table(characterInventory.food);
 console.log(characterInventory.food[1]);
 */
 
-const characterName = {
-    firstName : ['artimis', 'herald', 'ragnor', 'charlie', 'hunter'],
-    titleNameA : ['deviant', 'bloodied', 'bountiful', 'hateful', 'loving'],
-    titleNameB: ['destroyer', 'killer', 'sailor', 'soldier', 'jester'],
-    lastName : ['bloodthorne', 'clove', 'hope', 'raylor']
-}
+
 //loop characterName arrays through randomIndexNumber to produce name?
 //e.g. artmis 'the bloddied jester' clove // artmis clove - the bloodied jester
 //take user input?
@@ -91,7 +87,6 @@ const characterName = {
 const dndRaceImage = [];
 
 const dndClassImage = [];
-
 
 
 //                      //
@@ -113,10 +108,9 @@ function d20Roll() { //random to generate number, floor to become integer
 
 function generateCharacter() { //change this to generate individual components instead of all character?
 
-    //generate random number between 0 and array length - exclusive as array starts at 0
-    function randomIndexNumber(i){
-        return i[Math.floor(Math.random() * i.length)];
-    }
+    //          
+    //  DATA    
+    //          
     
     //race
     const dndRace = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Half-Orc", "Halfling", "Human", "Tiefling"];
@@ -124,6 +118,29 @@ function generateCharacter() { //change this to generate individual components i
     const dndClass = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
     //console.log("Number of D&D races: " + dndRace.length);
     //console.log("Number of D&D classes: " + dndClass.length);
+
+    const dndName = {
+        firstName : ['artimis', 'herald', 'ragnor', 'charlie', 'hunter'],
+        titleNameA : ['deviant', 'bloodied', 'bountiful', 'hateful', 'loving'],
+        titleNameB: ['destroyer', 'killer', 'sailor', 'soldier', 'jester'],
+        lastName : ['bloodthorne', 'clove', 'hope', 'raylor']
+    }
+
+
+    //            
+    //  FUNCTIONS 
+    //            
+
+    //generate random number between 0 and array length - exclusive as array starts at 0
+    function randomIndexNumber(i){
+        return i[Math.floor(Math.random() * i.length)];
+    }
+
+    //https://flexiple.com/javascript/javascript-capitalize-first-letter/
+    //alt css text-transform:capitalize;
+    function capitaliseFirst(i){
+        //would need to make strings first
+    }
 
     //          //
     //  OUTPUT  //
@@ -133,6 +150,13 @@ function generateCharacter() { //change this to generate individual components i
     //console.log(`Race using randomNumber function is: ${raceLength}`);
     classLength = randomIndexNumber(dndClass);
     //console.log(`Class using randomNumber function is: ${classLength}`);
+    
+    //better way to structure? loop?
+    firstName = randomIndexNumber(dndName.firstName);
+    titleNameA = randomIndexNumber(dndName.titleNameA);
+    titleNameB = randomIndexNumber(dndName.titleNameB);
+    lastName = randomIndexNumber(dndName.lastName);
+  
 
     //
     //  PRINT
@@ -141,7 +165,10 @@ function generateCharacter() { //change this to generate individual components i
     console.log(`%c Here is your inventory:`, 'font-size: 16px');
     console.log(characterInventory);
 
-    document.getElementById("character-result").innerHTML = `You are a ${raceLength} ${classLength}!`;
+    //HTML PRINT
+    document.getElementById("character-class").innerHTML = `You are a ${raceLength} ${classLength}!`;
+    document.getElementById("character-name").innerHTML = `Your name is ${firstName} \'the ${titleNameA} ${titleNameB}\' ${lastName}`;
+
 }
 
 
