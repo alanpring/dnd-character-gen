@@ -106,7 +106,7 @@ const dndClassImage = [];
 
 function d20Roll() { //random to generate number, floor to become integer
     const d20 = Math.floor(Math.random()* 20) +1; //+1 to set rolls to 1-20
-    console.log(`You rolled ${d20} on the D20!`);
+    console.info(`You rolled ${d20} on the D20!`);
     document.getElementById("d20-roll-result").innerHTML = d20; //print result to div
 }
 
@@ -137,8 +137,8 @@ function generateCharacter() { //change this to generate individual components i
     //
     //  PRINT
     //
-    console.log(`You are a ${raceLength} ${classLength}!`);
-    console.log(`Here is your inventory:`);
+    console.log(`%c You are a ${raceLength} ${classLength}!`, 'font-size: 20px; font-weight:700');
+    console.log(`%c Here is your inventory:`, 'font-size: 16px');
     console.log(characterInventory);
 
     document.getElementById("character-result").innerHTML = `You are a ${raceLength} ${classLength}!`;
