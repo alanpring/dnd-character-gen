@@ -151,12 +151,11 @@ function generateCharacter() { //change this to generate individual components i
     classLength = randomIndexNumber(dndClass);
     //console.log(`Class using randomNumber function is: ${classLength}`);
     
-    //better way to structure? loop?
+    //refactor? loop?
     firstName = randomIndexNumber(dndName.firstName);
     titleNameA = randomIndexNumber(dndName.titleNameA);
     titleNameB = randomIndexNumber(dndName.titleNameB);
     lastName = randomIndexNumber(dndName.lastName);
-  
 
     //
     //  PRINT
@@ -167,7 +166,7 @@ function generateCharacter() { //change this to generate individual components i
     console.log(`%c You are a ${raceLength} ${classLength}!`, 'font-size: 20px; font-weight:700');
     console.log(`%c Your name is ${firstName} \'the ${titleNameA} ${titleNameB}\' ${lastName}`, 'font-size: 18px; font-weight:500; color:red;');
     console.log(`%c Here is your inventory:`, 'font-size: 16px');
-    console.log(characterInventory);
+    console.table(characterInventory);
 
     //HTML PRINT
     document.getElementById("character-class").innerHTML = `You are a ${raceLength} ${classLength}!`;

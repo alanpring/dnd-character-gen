@@ -25,6 +25,11 @@ h1 {
     background-color: #e7e7db;
 }
 
+#dnd-logo {
+    width: 150px;
+    height: auto;
+}
+
 
 #d20-roll-button {
     border: none;
