@@ -9,30 +9,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>D&D Random Character Creator</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script src="dnd-c-c.js"></script>
+        <script src="dnd-c-g.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="char-gen-container">
-            <h1>D&D Character Generator</h1>
-            <p style="">Roll the D20 to generate your character!</p>
+            <div id="title">
+                <h1>D&D Character Generator</h1>
+            </div>
+            
+            <div>
+                <p style="">Roll the D20 to generate your character!</p>
+            </div>
 
-            <button id="d20-roll-button" onclick="d20Roll(), generateCharacter();" style="button">
-                <img id="d20-roll-button-img" src="images/d20_640.png" alt="A red D20 die showing the number 20.">
-            </button>
+            <div>
+                <button id="d20-roll-button" onclick="d20Roll(), generateCharacter();" style="button">
+                    <img id="d20-roll-button-img" src="images/d20_640.png" alt="A red D20 die showing the number 20.">
+                </button>
+            </div>
 
             <div id="d20-roll-result">What will you roll?</div>
 
-            <h1>Character:</h1>
-
-            <div id="character"></div>
-            <div id="character-class"></div>
-            <div id="character-name"></div>
-            <div id="character-inventory"></div>
+            <div>
+                <h1>Character:</h1>
+                <div id="character-image">
+                    <img src="images/race and class/half-elf-bard.png" alt="">
+                </div>
+                <div id="character"></div>
+                <div id="character-class"></div>
+                <div id="character-name"></div>
+                <div id="character-inventory"></div>
+            </div>
         </div>
     </body>
 </html>

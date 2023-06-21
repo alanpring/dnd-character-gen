@@ -1,7 +1,16 @@
-html, body {
+* {
+    /* outline all elements on page*/
+    outline: 0.1em solid black;
+}
+html {
     display: flex;
     justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ebebe6;
+}
+
+body {
+
 }
 
 h1 {
@@ -9,12 +18,13 @@ h1 {
     text-transform: uppercase;
 }
 #char-gen-container {
-    width: 300px;
-    min-width: 250px;
+    min-width: 100%;
+    max-width: 100%;
     height: auto;
-    min-height: 500px;
-    background-color: grey;
+    min-height: 600px;
+    background-color: #e7e7db;
 }
+
 
 #d20-roll-button {
     border: none;
@@ -35,3 +45,24 @@ h1 {
     font-weight:600;
 }
 
+#character-image img {
+
+}
+#character-image img {
+    width: 50%;
+    max-width: 500px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #char-gen-container {
+        max-width: 900px;
+    }
+  }
+
+/* Desktop*/
+@media only screen and (min-width: 992px) {
+    #char-gen-container {
+        max-width: 1200px;
+    }
+}
